@@ -1,0 +1,972 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.heading-containar {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  height: 35px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.navdiv {
+  display: flex;
+  height: 75px;
+  width: 98%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+
+}
+
+/* Links inside the dropdown */
+.dropdown-container {
+  display: flex;
+  gap: 25px;
+
+}
+
+/* dropdown button */
+.dropbtn {
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+/* Add a pseudo-element for the underline effect */
+.dropbtn::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease-out;
+}
+
+/* Expand underline from left to right */
+.dropdown:hover .dropbtn::after {
+  width: 100%;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: start;
+}
+
+/* Show the dropdown content on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change color of the dropdown button when hovered */
+.dropdown:hover .dropbtn {
+  background-color: white;
+}
+
+/* Change color of links when hovered */
+.dropdown-content a:hover {
+  background-color: white;
+}
+
+.dropbtn::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease-out;
+}
+
+.navigation {
+  display: flex;
+  float: left;
+}
+
+a {
+  color: black;
+}
+
+.icon {
+  font-size: 25px;
+}
+
+.fa-solid,
+.fas {
+  font-weight: bold;
+  gap: 2px;
+}
+
+.slider {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-images {
+  display: flex;
+  width: 200%;
+  animation: slide 5s infinite;
+}
+
+.slide {
+  width: 50%;
+  transition: opacity 1s ease-in-out;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.shiny-button {
+  background-color: #000;
+  color: white;
+  height: 35px;
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+.shiny-button:hover {
+  background-color: #333;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+span.span {
+  color: red;
+}
+
+.new {
+  height: 220px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+
+.new h2 {
+  font-size: 35px;
+}
+
+.new p {
+  font-size: 20px;
+}
+
+.new .shiny-button {
+  width: 13%;
+}
+
+.product {
+  background-color: white;
+  overflow: hidden;
+  transition: box-shadow 0.4s ease-out;
+  position: relative;
+  padding: 10px 10px;
+  width: 35%;
+}
+
+.product-img .rear-img {
+  opacity: 0;
+  position: absolute;
+  top: 9px;
+  left: 0;
+  z-index: -1;
+}
+
+.product:hover .rear-img {
+  opacity: 1;
+  z-index: 0;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.project-grid {
+  display: flex;
+  flex-direction: row;
+}
+
+button.but {
+  color: white;
+  background-color: black;
+  width: 100%;
+}
+
+figure {
+  text-align: center;
+  margin: 0;
+}
+
+figcaption {
+  color: black;
+  margin: 6px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.heading4 {
+  display: flex;
+  justify-content: center;
+  height: 220px;
+  align-items: center;
+  font-size: 15px;
+}
+
+
+
+span.red {
+  color: red;
+  font-weight: 600;
+}
+
+.dropdown {
+  text-align: center;
+
+}
+
+.video {
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+  gap: 20px;
+  justify-content: center;
+}
+
+.option {
+  padding: 20px;
+}
+
+.heading5 {
+  text-align: center;
+  font-size: 25px;
+  margin: 20px;
+  height: 50px;
+}
+
+.point {
+  text-align: center;
+  padding: 10px 10px;
+}
+
+.\32 age {
+  display: flex;
+  flex-direction: row;
+}
+
+.box1 img {
+  width: 300px;
+}
+
+.\33 age {
+  display: flex;
+  flex-direction: row;
+}
+
+.box1 {
+  padding: 2px;
+}
+
+.line {
+  text-decoration: line-through;
+}
+
+.heading6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: gray;
+  height: 120px;
+  text-decoration: underline;
+}
+
+
+.img-center {
+  width: 50%;
+  display: flex;
+  padding: 10px 10px;
+}
+
+.img-center img {
+  height: 620px;
+
+}
+
+.center-img {
+  display: flex;
+}
+
+.sct2image {
+  display: flex;
+  width: 98%;
+  padding: 10px 10px;
+}
+
+.\32 img {
+  width: 50%;
+}
+
+.product-img img {
+  height: 351px;
+}
+
+.\32 img .shiny-button {
+  width: 150px;
+}
+
+.gab figcaption {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+
+.containwe3 {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  justify-content: center;
+}
+
+.child1 {
+  width: 250px;
+
+}
+
+.group-img1 {
+  width: 250px;
+}
+
+.child4 {
+  width: 250px;
+
+}
+
+
+
+.group-img img {
+  height: 250px;
+}
+
+.group-img img {
+  width: 250px;
+  height: 250px;
+  object-fit: fill;
+}
+
+.group-img img {
+  height: 250px;
+  object-fit: fill;
+}
+
+.big-group-img {
+  height: 500px;
+  object-fit: cover;
+}
+
+.big-group-img img {
+  height: 505px;
+  width: 430px;
+}
+
+.right-group-img {
+  width: 250px;
+  height: 250px;
+}
+
+.right-group-img img {
+  width: 250px;
+  height: 250px;
+
+}
+
+
+
+h6 {
+  font-size: 30px;
+
+}
+
+.group-img1 {
+  width: 250px;
+}
+
+.group-img2 {
+  width: 250px;
+}
+
+.group-img img {
+  height: 250px;
+  object-fit: fill;
+}
+
+.btnn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 75px;
+}
+
+.btnn .shiny-button {
+  width: 20%;
+}
+
+
+
+.img-last {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  height: 400px;
+  align-items: center;
+}
+
+.img-last img {
+  width: 175px;
+}
+
+.box22 {
+  display: flex;
+  height: 130px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.heading9 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer {
+  display: flex;
+
+  justify-content: space-evenly;
+
+  font-size: 20px;
+  line-height: 60px;
+  text-align: left;
+  height: 280px;
+
+}
+
+.social-link a {
+  font-size: 25px;
+
+}
+
+
+li {
+  list-style: none;
+  line-height: 25px;
+}
+
+.last-line-1 {
+  text-align: center;
+}
+
+.footer1 {
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+.btn1 {
+  position: relative;
+  border: none;
+  transition: all 0.5s;
+  z-index: 1;
+  cursor: pointer;
+  border-radius: 3px;
+  background-color: black;
+  color: white;
+  top: 50px;
+}
+
+.btn1::before,
+.btn1::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+}
+
+.btn1:hover {
+  background: gray;
+  color: black;
+  box-shadow: 0 0 5px #0000003b, 0 0 25px #0000003b, 0 0 50px #0000003b;
+}
+
+form {
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #060606;
+}
+
+form .far {
+  font-size: 15px;
+  margin-right: 10px;
+}
+
+form input {
+  width: 100%;
+  background: transparent;
+  color: black;
+  border: 0;
+  outline: none;
+}
+
+form button {
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.email.b0x {
+  padding: 10px 10px 0px 0px;
+}
+
+form button .fas {
+  color: black;
+  font-size: 18px;
+}
+
+
+
+h4 {
+
+  text-decoration: underline;
+  font-size: 25px;
+}
+
+.dropbtn {
+  height: 35px;
+}
+
+.heading9 p {
+  font-size: 25px;
+}
+
+.last-line-1 h6 {
+  font-size: 25px;
+}
+
+
+
+.\31 child img {
+  height: 300px;
+  width: 250px;
+}
+
+.\31 child {
+  width: 500px;
+  height: 600px;
+  display: flex;
+
+
+  /* .image-container {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    width: 200px;
+    height: 200px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hover-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Adjust opacity as needed  */
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+
+}
+
+.image-container img {
+  width: 455px;
+  height: 503px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hover-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 464px;
+  height: 520px;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+
+}
+
+video {
+  border-radius: 160px;
+}
+
+.image-container:hover img {
+  transform: scale(1.1);
+}
+
+.image-container:hover .hover-content {
+  opacity: 1;
+}
+
+
+.full-img img {
+  width: 100%;
+}
+
+.fig button {
+  width: 30%;
+}
+
+.heading8 {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+  height: 150px;
+  font-weight: 600;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.heading8::before,
+.heading8::after {
+  content: '';
+  flex: 0 1 50px;
+  border-bottom: 2px solid black;
+}
+
+.heading8::before {
+  content: '';
+}
+
+.heading8::after {
+  content: '';
+}
+
+.fig figcaption {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.fig button {
+  width: 20%;
+  letter-spacing: 2px;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.full-img {
+  height: 275px;
+  align-items: flex-end;
+  display: flex;
+}
+
+.heading88 {
+  height: 150px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.para1 figcaption {
+  font-size: 15px;
+}
+
+p.pg {
+  font-weight: 600;
+  font-size: 17px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* pagination */
+.pagination-container {
+  width: 100%;
+
+  /* Larger width for e-commerce display */
+  text-align: center;
+}
+
+
+
+.pagination-controls label {
+  padding: 8px 13px;
+  background-color: white;
+  border: 1px solid black;
+
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size: 20px;
+}
+
+.pagination-controls label:hover {
+  background-color: #e8e8e8;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.page-content {
+  display: none;
+}
+
+/* Show content when a radio button is selected */
+#page1:checked~.content #content1,
+#page2:checked~.content #content2,
+#page3:checked~.content #content3,
+#page4:checked~.content #content4,
+#page5:checked~.content #content5 {
+  display: block;
+}
+
+/* Highlight the selected page number */
+#page1:checked~.pagination-controls label[for="page1"],
+#page2:checked~.pagination-controls label[for="page2"],
+#page3:checked~.pagination-controls label[for="page3"],
+#page4:checked~.pagination-controls label[for="page4"],
+#page5:checked~.pagination-controls label[for="page5"] {
+  background-color: black;
+  color: white;
+}
+
+
+.page {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  height: 85px;
+
+}
+
+.image-3 {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.top {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.top img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.top figcaption {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.top figcaption span {
+  color: red;
+  font-weight: bold;
+}
+
+/* Make pagination more responsive */
+@media (max-width: 600px) {
+  .pagination-controls label {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .page-content {
+    padding: 15px;
+  }
+}
+
+.line1 {
+  display: flex;
+  gap: 25px;
+}
+
+.good1 {
+  display: flex;
+  gap: 25px;
+
+}
+
+.product-img img {
+  height: 350px;
+  width: 250px;
+}
+
+.product-img-1 img {
+  height: 350px;
+
+}
+
+.img1page .rear-img-1 {
+  opacity: 0;
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+}
+
+.img1page {
+  background-color: white;
+  overflow: hidden;
+  transition: box-shadow 0.4s ease-out;
+  position: relative;
+
+  width: 25%;
+}
+
+.img1page:hover .rear-img-1 {
+  opacity: 1;
+  z-index: 0;
+}
+
+img.rear-img-1 {
+  width: 300px;
+
+}
+
+
+
+.line11 {
+  display: flex;
+  gap: 10px;
+}
+
+.end {
+  text-align: right;
+}
+
+.big-image {
+
+  display: flex;
+
+  justify-content: space-evenly;
+}
+
+.big-image img {
+
+  width: 612px;
+  height: 500px;
+
+}
