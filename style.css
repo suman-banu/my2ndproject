@@ -9,6 +9,7 @@
 body {
   font-family: "Montserrat", sans-serif;
 }
+/* start heading */
 .heading-containar {
   background-color: black;
   color: white;
@@ -17,99 +18,178 @@ body {
    display: flex; 
   justify-content: space-around;
   align-items: center;
+  letter-spacing: 2px;
+  font-size: x-small;
+
 } 
-.container {
-  display: flex;
-  justify-content: center;
-  gap: 5%;
-  padding: 10px;
-  /* gap: 50px; */
-  height: 150px;
-  align-items: center;
-}
-a {
-color: black;
-}
-/* dropdown button */
-.dropbtn {
-  background-color: white;
-  color: black;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  text-decoration: none;
-}
-/* Add a pseudo-element for the underline effect */
-.dropbtn::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background-color: white;
-  left: 0;
-  bottom: 0;
-  transition: width 0.3s ease-out;
-}
-/* Expand underline from left to right */
-.dropdown:hover .dropbtn::after {
-  width: 100%;
-}
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: start;
-}
-/* Show the dropdown content on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-/* Change color of the dropdown button when hovered */
-.dropdown:hover .dropbtn {
-  background-color: white;
-}
-/* Change color of links when hovered */
-.dropdown-content a:hover {
-  background-color: white;
-}
-.dropbtn::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background-color: black;
-  left: 0;
-  bottom: 0;
-  transition: width 0.3s ease-out;
-}
-.class2 {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.icon {
-  font-size: 25px;
-  display: flex;
-  gap: 5px;
+
+        /* Styling for mobile screens (max-width: 768px) */
+        @media screen and (max-width: 768px) {
+          .heading-containar {
+              flex-direction: column; /* Stack text vertically */
+              height: auto; /* Auto height to adjust content */
+              /* padding: 10px; Add some padding for spacing */
+          }
+
+          .heading-containar p {
+              font-size: 10px; /* Smaller font size for mobile */
+              /* margin: 5px 0; Margin between text items */
+          }
+      }
+
+      /* Styling for small screens (max-width: 480px) */
+      @media screen and (max-width: 300px) {
+          
+
+          .heading-containar p {
+              font-size: 8px; /* Smaller font for very small screens */
+          }
+      }
+
+      /* Styling for larger screens (min-width: 769px) */
+      @media screen and (min-width: 769px) {
+          .heading-containar {
+              font-size: small; /* Slightly larger font for bigger screens */
+          }
+      }
+/* end heading */
+/* start nav */
+
+/* Basic styling for the navigation */
+nav {
+  background-color: #fff; /* Background color */
+  width: 100%; /* Full width */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  position: relative; /* Positioning context for dropdowns */
 }
 
-.fa-solid,.fas {
-  font-weight: unset;
-  gap: 5px;
+/* Container for navigation elements */
+.container {
+  display: flex; /* Flexbox for layout */
+  justify-content: space-between; /* Space out elements */
+  align-items: center; /* Center items vertically */
+  padding: 10px 20px; /* Padding around the container */
+  height: 150px;
+}
+
+/* Flex container classes for logo, nav links, and icons */
+.class1, .class2, .class3 {
+  display: flex; /* Flexbox for alignment */
+  align-items: center; /* Center items vertically */
+}
+
+/* Logo styling */
+.logo h1 {
+  font-size: 24px; /* Logo font size */
+}
+
+/* Navigation links section */
+.class2 {
+  display: flex; /* Show links horizontally */
+  gap: 20px; /* Space between links */
+ /* height: 60px; */
+  justify-content: center;
+  width: 80%;
+  flex-wrap: wrap;
+  gap: 2%;
+}
+
+/* Dropdown styling */
+.dropdown {
+  position: relative; /* Position for dropdown content */
+}
+.dropdown:hover {
+  border-bottom: 2px solid;
+}
+
+.dropbtn {
+  background-color: transparent; /* Button background */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Font size */
+  padding: 10px; 
+  /* Padding for button */
+}
+
+/* Dropdown content styling */
+.dropdown-content {
+  display: none; /* Hidden by default */
+  position: absolute; /* Positioned relative to the dropdown */
+  background-color: white; /* Background color */
+  min-width: 100px; /* Minimum width */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  z-index: 1; /* Layering */
+}
+
+/* Show dropdown content on hover */
+.dropdown:hover .dropdown-content {
+  display: block; /* Show on hover */
+}
+
+/* Dropdown link styling */
+.dropdown-content a {
+  display: block; /* Block display for easy clicking */
+  padding: 10px; 
+  /* Padding for links */
+  text-decoration: none; /* No underline */
+  color: black; /* Text color */
+}
+
+/* Change link color on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1; /* Hover effect */
+}
+
+/* Icons section */
+.icon i {
+  margin-left: 20px; /* Space between icons */
+  font-size: 20px; /* Icon size */
+}
+
+/* Hamburger menu styling */
+.hamburger {
+  display: none; /* Hidden by default */
+  font-size: 24px; /* Size of the hamburger icon */
+  cursor: pointer; /* Pointer on hover */
+}
+
+.hamburger i {
+  color: #333; /* Icon color */
+}
+
+
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  /* Show hamburger menu */
+  .hamburger {
+      display: block; /* Show hamburger icon */
+  }
+
+  /* Hide nav links by default */
+  .class2 {
+      display: none; /* Hide navigation by default */
+      flex-direction: column; /* Stack links vertically */
+      position: absolute; /* Position absolutely */
+      top: 100px; /* Position below the navbar */
+      left: 0;
+       /* Align to the left */
+      /* right: 0;  */
+      /* Stretch to the right */
+      background-color: white; /* Background color */
+      z-index: 1; /* Layering */
+      align-items: start;
+  }
+
+  /* Show navigation when checkbox is checked */
+  input[type="checkbox"]:checked ~ .class2 {
+      display: flex; /* Show menu */
+  }
+}
+/* end nav */
+.fa-brands, .fab {
+  font-weight: 400;
+  color: black;
 }
 b {
   color: black;
@@ -141,6 +221,10 @@ b {
   100% {
     transform: translateX(-100%);
   }
+}
+.redspan button {
+  color: red;
+  font-weight: 600;
 }
 p {
   margin: 3px;
@@ -189,13 +273,17 @@ p.pline {
 .container2 {
 display: flex;
 width: 100%;
-height: 600px;
+/* height: 600px; */
 }
 .video-slide {
-  height: 600px;
+  /* height: 600px; */
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.product-img-1 {
+  width: min-content;
+  font-size: 14px;
 }
 .class-a-1 {
 width: 25%;
@@ -215,13 +303,13 @@ left: 0;
 z-index: -1;
 
 }
-.img1page {
+/* .img1page {
 background-color: white;
 overflow: hidden;
 transition: box-shadow 0.4s ease-out;
 position: relative;
 
-}
+} */
 .img1page:hover .rear-img-1 {
 opacity: 1;
 z-index: 0;
@@ -234,7 +322,7 @@ height: 300px;
 }
 .product-img-1 img {
 width: 250px;
-height: 300px;
+height: 350px;
 }
 .new1 {
 display: flex;
@@ -281,6 +369,10 @@ gap: 10px;
   transition: opacity 1s ease-in-out;
   
 } */
+
+.emt {
+  height: 30px;
+}
 
 @keyframes slide {
   0% {
@@ -442,65 +534,71 @@ span.red {
 }
 .containwe3 {
   display: flex;
+  flex-wrap: wrap;
   width: 99%;
   gap: 10px;
   justify-content: center;
 }
 .child1 {
-  width: 250px;
+  width: 200px;
 }
 .group-img1 {
-  width: 250px;
+  width: 200px;
 }
 .child4 {
-  width: 250px;
+  width: 200px;
 }
-.group-img img {
+/* .group-img img {
   height: 250px;
-}
+} */
 .group-img img {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  /* height: 250px; */
   object-fit: fill;
 }
-.group-img img {
+/* .group-img img {
   height: 250px;
   object-fit: fill;
-}
+} */
 .big-group-img {
-  height: 500px;
+  /* height: 500px; */
+  /* width: 400px; */
   object-fit: cover;
 }
-.big-group-img img {
+.child2 {
+  width: 400px;
+}
+/* .big-group-img img {
   height: 505px;
   width: 430px;
-}
-.right-group-img {
+} */
+/* .right-group-img {
   width: 250px;
   height: 250px;
-}
+} */
 .right-group-img img {
-  width: 250px;
-  height: 250px;
+  /* width: 200px; */
+  height: 200px;
 }
 h6 {
-  font-size: 30px;
+  font-size: 20px;
 }
-.group-img1 {
+/* .group-img1 {
   width: 250px;
-}
+} */
 .group-img2 {
   width: 250px;
 }
 .group-img img {
-  height: 250px;
+  height: 200px;
   object-fit: fill;
 }
 .img-last {
   display: flex;
+  flex-wrap: wrap;
   gap: 15px;
   justify-content: center;
-  height: 400px;
+  /* height: 400px; */
   align-items: center;
 }
 .img-last img {
@@ -524,7 +622,9 @@ h6 {
   font-size: 20px;
   line-height: 60px;
   text-align: left;
-  height: 280px;
+  flex-wrap: wrap;
+  width: 99%;
+  /* height: 280px; */
 }
 .social-link a {
   font-size: 25px;
@@ -540,6 +640,7 @@ li {
 .footer1 {
   margin: 50px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
 }
 button.shiny-button {
@@ -592,30 +693,34 @@ h4 {
   font-size: 20px;
   color: dimgrey;
 }
-.\31 child img {
+/* .\31 child img {
   height: 300px;
   width: 250px;
-}
-.\31 child {
+} */
+/* .\31 child {
   width: 500px;
   height: 600px;
   display: flex;
+} */
+.image-container img {
+  height: 405px;
 }
 .image-container {
   position: relative;
   overflow: hidden;
+  height: 405px;
 }
 .image-container img {
-  width: 455px;
-  height: 503px;
+  /* width: 455px;
+  height: 503px; */
   transition: transform 0.3s ease-in-out;
 }
 .hover-content {
   position: absolute;
   top: 0;
   left: 0;
-  width: 464px;
-  height: 520px;
+  width: 400px;
+  height: 405px;
   background-color: rgba(0, 0, 0, 0.7);
   color: #fff;
   opacity: 0;
@@ -739,10 +844,11 @@ input[type="radio"] {
 }
 .page {
   display: flex;
+  flex-wrap: wrap;
   gap: 15px;
   justify-content: center;
   align-items: center;
-  height: 100px;
+  /* height: 100px; */
 }
 .image-3 {
   display: flex;
@@ -794,9 +900,9 @@ input[type="radio"] {
   height: 350px;
   width: 250px;
 }
-.product-img-1 img {
+/* .product-img-1 img {
   height: 350px;
-}
+} */
 .img1page .rear-img-1 {
   opacity: 0;
   position: absolute;
@@ -824,6 +930,7 @@ input[type="radio"] {
 }
 .big-image {
   display: flex;
+  /* flex-wrap: wrap; */
   gap: 1%;
   justify-content: space-evenly;
 }
@@ -832,10 +939,12 @@ input[type="radio"] {
   display: flex;
   justify-content: space-around;
 }
+/* }
 .big-image img {
-  width: 612px;
-  height: 600px;
-}
+  height: 80%;} */
+  /* width: 612px;
+  height: 600px; */
+
 .btnn {
   height: 120px;
   display: flex;
@@ -871,4 +980,275 @@ h3 {
 }
 .heading9 h3 {
   color: black;
+}
+.right-group-img {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  gap: 5px;
+
+
+}
+
+
+.page-contect {
+  display: flex;
+}
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+
+@media only screen and (max-width:374px){
+  .big-group-img img{
+    width: 300px;
+  }
+  .right-group-img img {
+    width: 300px;
+  height: 300px;
+
+}
+.image-container img {
+  width: 361px;
+}
+/* .image-container{
+  width: 300px;
+  } */
+  .right-group-img {
+    display: flex;
+  width: 300px;
+  flex-direction: row;
+  
+}
+.container{
+  height: 75px;
+}
+.group-img1 img {
+  width: 116px;
+}
+.group-img img {
+  height: 197px;
+  width: 125px;
+  object-fit: fill;
+}
+.big-group-img {
+  /* height: 500px; */
+  /* width: 275px; */
+  display: flex;
+  object-fit: cover;
+  justify-content: center;
+  
+}
+.hover-content{
+  width: 300px;
+}
+.image-container img {
+  width: 300px;
+}
+.child4{
+  width: 200px;
+}
+.containwe3{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+}
+}
+
+
+
+
+@media only screen and (max-width:767px){
+  /* .heading-containar{
+    display: none;
+  } */
+  /* p.heading1{
+    display: none;
+  } */
+  .container2{
+    flex-direction: column;
+  }
+  .image-container img {
+    width: 300px;
+  }
+  /* .container{
+    display: none;
+  } */
+ 
+  .class-a-1 {
+    /* text-align: center; */
+    width: 100%;
+    font-size: 10px;
+    /* gap: 11px; */
+    height: 150px;
+}
+.boxx1 {
+  flex-direction: column;
+}
+/* .img1page{
+  width: 200px;
+  height: 150px;
+
+} */
+.product-img-1 img{
+  width: 250px;
+  height: 250px;
+}
+.container{
+  height: 90px;
+}
+.product-img-1{
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+.slider1-container{
+  align-items: center;
+  justify-content: end;
+}
+.video{
+  flex-direction: column;
+  justify-content: center;
+}
+.video-slide {
+  width: 99%;
+}
+.heading4{
+  font-size: 10px;
+}
+.heading8{
+  font-size: 15px;
+}
+.big-image{
+  flex-direction: column;
+  width: 250px;
+  gap: 30px;
+}
+.fig button{
+  width: 110px;
+}
+.heading88{
+  font-size: 10px;
+}
+.footer1{
+  flex-direction: column;
+  gap: 20px;
+}
+p.pg{
+  font-size: 10px;
+}
+.product-img-1{
+  font-size: 10px;
+}
+
+.img-last{
+  gap: 10px;
+}
+.end{
+  text-align: center;
+}
+.child1{
+  width: 100px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.containwe3{
+  width: 100%;
+}
+.child4{
+  width: 155px;
+}
+.group-img1 img {
+  width: 160px;
+  height: 200px;
+}
+.right-group-img {
+  display: flex;
+  width: 349px;
+  gap: 15px;
+}
+h1 {
+  font-size: 22px;
+}
+/* .video-slide{
+  width: 200px;
+  height: 350px;
+} */
+
+
+
+
+
+}
+@media only screen and (min-width:767px) and (max-width:991px){
+  .container2{
+    gap: 15px;
+  }
+  .container{
+    height: 100px;
+  }
+  .class-a-1{
+    text-align: center;
+  }
+  .slider1-container{
+    width: 75%;
+  }
+  .video{
+    width: 99%;
+    justify-content: end;
+  }
+  .big-image {
+    width: 95%
+  };
+  .class3{
+    
+    flex-direction: column;
+  }
+  .fig button{
+    width: 30%;
+  }
+}
+@media only screen and (min-width:992px) and (max-width:1199px){
+  .video {
+    width: 95%;
+    justify-content: start;
+}
+.video-slide {
+  width: 100%;
+}
+.big-img {
+  width: 102%;
+  justify-content: center;
+}
+.big-image {
+  width: 95%;
+}
+.fig {
+  font-size: 30px;
+}
+.para1 {
+  text-align: center;
+}
+.icon {
+  display: flex;
+}
+}
+/* @media only screen and (max-width:1200px){ */
+  /* .video {
+    width: 95%;
+    justify-content: center;
+}
+} */
+@media only screen and(max-width:1400px){
+  /* .content {
+    width: 100%;
+}
+.content {
+    display: flex;
+    justify-content: center;
+} */
+.content {
+  width: 75%;
+}
 }
