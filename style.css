@@ -748,11 +748,11 @@ video {
   width: 90%;
   object-fit: contain;
 }
-.full-img {
+/* .full-img {
   height: 275px;
   display: flex;
   justify-content: center;
-}
+} */
 .fig button {
   width: 30%;
 }
@@ -923,6 +923,7 @@ input[type="radio"] {
   overflow: hidden;
   transition: box-shadow 0.4s ease-out;
   position: relative;
+  /* width: 250px; */
 }
 .img1page:hover .rear-img-1 {
   opacity: 1;
@@ -1007,6 +1008,37 @@ h3 {
   justify-content: center;
 }
 
+.box-logo {
+    width: 30%;
+    background-color: lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 190px;
+}
+
+.full-img {
+  /* height: 275px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3%;
+}
+.box-logo img {
+  width: 75px;
+  height: 98px;
+}
+
+.logo-box {
+    width: 54%;
+}
+
+.logo-box p {
+  font-size: smaller;
+    
+}
+
 @media only screen and (max-width:768px) and (min-width:300px){
   .heading-containar {
       flex-direction: column;
@@ -1027,8 +1059,24 @@ h3 {
 .image-3{
   justify-content: center;
 }
+.slider1-container .boxx1 img {
+  width: 153px;
+  height: 200px;
+}
+.box-logo {
+  width: 80%;
+  margin: 10px;}
+  .full-img {
+    flex-direction: column;
+  }
+  /* .img1page {
+    width: 163px;
+} */
+.b1box img {
+  width: 153px;
+}
 
-
+  
 .boxx1 {
   flex-wrap: wrap;
   justify-content: center;
@@ -1036,10 +1084,10 @@ h3 {
 .slider1-container {
   width: 100%;
 }
-.product-img-1 img {
-  width: 250px;
+/* .product-img-1 img {
+  width: 153px;
   height: 300px;
-}
+} */
 .heading8 {
   width: 100%;
   font-size: 20px;
@@ -1098,22 +1146,36 @@ video {
   width: 35%;
   margin: 0 auto;
 }
+.slider1-container .boxx1 img {
+  width: 200px;
+  height: 250px;
+}
+
+.slider1-container {
+  width: 77%;}
 /* .video {
   justify-content:space-evenly;
-} */
- .video{
-  width: 95%;
- }
-.fig button {
-  width: 30%;
+  } */
+  .video{
+    width: 95%;
+  }
+  .fig button {
+    width: 30%;
+  }
+  .end {
+    text-align: end;
+  }
+  .image-3{
+    justify-content: center;
+  }
+  .img1page {
+    width: 245px;
+  }
+  .b1box {
+    width: 200px;
+  }
 }
-.end {
-  text-align: end;
-}
-.image-3{
-  justify-content: center;
-}
-}
+
 
 
 @media only screen and (max-width:1400px) and (min-width:1024px){
@@ -1134,7 +1196,7 @@ video {
   justify-self: center;
 } */
 
-}
+ }
 
 
 /* @media only screen and (max-width:2000px) and (min-width:1400px){
