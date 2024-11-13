@@ -1149,11 +1149,11 @@ video {
   text-align: center;
 }
 .video-slide{
-  width: 70%;
+  width: 98%;
   margin: auto;
 }
 .content {
-  width: 80%;
+  width: 90%;
   margin: auto;
 }
 }
@@ -1211,6 +1211,8 @@ video {
   justify-content: center;
   width: 1100px;
 }
+.slider1-container {
+  width: 76%;}
 /*
 .content{
   width: 83%;
