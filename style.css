@@ -898,6 +898,10 @@ input[type="radio"] {
   .page-content {
     padding: 15px;
   }
+  .slider1-container {
+    width: 99%;
+    margin: auto;
+  }
 }
 .line1 {
   display: flex;
@@ -1085,6 +1089,10 @@ h3 {
 .b1box img {
   width: 153px;
 }
+.content {
+  width: 90%;
+  margin: auto;
+}
 
   
 .boxx1 {
@@ -1092,7 +1100,7 @@ h3 {
   justify-content: center;
 }
 .slider1-container {
-  width: 80%;
+  width: 99%;
   margin: auto;
 }
 /* .product-img-1 img {
@@ -1153,9 +1161,10 @@ video {
   margin: auto;
 }
 .content {
-  width: 90%;
+  width: 95%;
   margin: auto;
 }
+
 }
 
 @media only screen and (max-width:992px) and (min-width:769px){
@@ -1213,11 +1222,7 @@ video {
 }
 .slider1-container {
   width: 76%;}
-/*
-.content{
-  width: 83%;
-  justify-self: center;
-} */
+
 
  }
 
